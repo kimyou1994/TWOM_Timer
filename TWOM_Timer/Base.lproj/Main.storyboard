@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T0L-sp-wge">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--IMO Timer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TWOM_Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UyQ-pk-2jr" userLabel="Monster Table View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MonsterCell" rowHeight="107" id="HXX-35-k6Y" customClass="MonsterCell" customModule="TWOM_Timer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HXX-35-k6Y" id="bPm-bR-SIt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQW-Mn-7OV" userLabel="Monster Image View">
+                                                    <rect key="frame" x="12" y="28.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Bo6-9S-07G"/>
+                                                        <constraint firstAttribute="width" secondItem="EQW-Mn-7OV" secondAttribute="height" multiplier="1:1" id="rdL-rX-fGh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-Hn-cpi" userLabel="Monster Timer">
+                                                    <rect key="frame" x="82" y="43.5" width="273" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="moj-0S-Dlr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmV-gs-ezL">
+                                                    <rect key="frame" x="303" y="38.5" width="52" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Ymh-nZ-Fu7"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                                    <state key="normal" title="Start">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="timerClicked:" destination="HXX-35-k6Y" eventType="touchUpInside" id="Crj-3o-qgU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EQW-Mn-7OV" firstAttribute="leading" secondItem="bPm-bR-SIt" secondAttribute="leading" constant="12" id="94O-Bk-ZsD"/>
+                                                <constraint firstItem="YX1-Hn-cpi" firstAttribute="leading" secondItem="EQW-Mn-7OV" secondAttribute="trailing" constant="20" id="EjF-Ad-6Fz"/>
+                                                <constraint firstItem="UmV-gs-ezL" firstAttribute="centerY" secondItem="bPm-bR-SIt" secondAttribute="centerY" id="PKf-pr-XmO"/>
+                                                <constraint firstItem="YX1-Hn-cpi" firstAttribute="centerY" secondItem="bPm-bR-SIt" secondAttribute="centerY" id="QTW-iT-0L4"/>
+                                                <constraint firstAttribute="trailing" secondItem="UmV-gs-ezL" secondAttribute="trailing" constant="20" id="e0o-Q8-whf"/>
+                                                <constraint firstItem="EQW-Mn-7OV" firstAttribute="centerY" secondItem="bPm-bR-SIt" secondAttribute="centerY" id="nUq-sb-TD2"/>
+                                                <constraint firstItem="UmV-gs-ezL" firstAttribute="trailing" secondItem="YX1-Hn-cpi" secondAttribute="trailing" id="sCN-a9-Wjh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="monsterButton" destination="UmV-gs-ezL" id="W3K-c9-K0z"/>
+                                            <outlet property="monsterImageView" destination="EQW-Mn-7OV" id="kpF-II-3P0"/>
+                                            <outlet property="monsterTimer" destination="YX1-Hn-cpi" id="YCo-46-UCK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="VBV-zK-BCa"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="7DL-z7-ifc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UyQ-pk-2jr" secondAttribute="bottom" id="0Jj-bf-e1S"/>
+                            <constraint firstItem="UyQ-pk-2jr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3E9-sg-9HL"/>
+                            <constraint firstAttribute="trailing" secondItem="UyQ-pk-2jr" secondAttribute="trailing" id="QBx-or-9Fc"/>
+                            <constraint firstItem="UyQ-pk-2jr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="udL-wa-pKJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="IMO Timer" prompt="    " id="t6v-D0-H4m" userLabel="TWOM Timer"/>
+                    <connections>
+                        <outlet property="tableView" destination="UyQ-pk-2jr" id="dfC-Bv-aZf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="-1045.7271364317842"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="scZ-fJ-kKM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T0L-sp-wge" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eb9-HK-ZDB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xOe-Ot-5eo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2S3-yp-GOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="-1011"/>
+        </scene>
+    </scenes>
+</document>
